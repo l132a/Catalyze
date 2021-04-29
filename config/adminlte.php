@@ -50,7 +50,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'Catalyze',
 
     /*
     |--------------------------------------------------------------------------
@@ -191,7 +191,7 @@ return [
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => false, //register
-    'password_reset_url' => false,//'password/reset'
+    'password_reset_url' => false, //'password/reset'
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
