@@ -181,4 +181,43 @@ class PostController extends Controller
             }
         }
     }
+
+    /**
+     * All the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function all(Request $request)
+    {
+        $limit = $request->input('limit');
+        $offset = $request->input('offset');
+        $total = Post::count();
+        $posts = DB::table('posts')->offset($offset)->limit($limit)->get();
+        if ($posts) {
+            return response()->json(['status' => true, 'data' => $posts, 'total' => $total]);
+        } else {
+            return response()->json(['status' => false]);
+        }
+    }
+
+    /**
+     * Get the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function get($id)
+    {
+        $post = DB::table('posts')
+            ->select('posts.*', 'categories.category')
+            ->join('categories', 'categories.id', '=', 'posts.category_id')
+            ->where('posts.id', $id)
+            ->first();
+        if ($post) {
+            return response()->json(['status' => true, 'data' => $post]);
+        } else {
+            return response()->json(['status' => false]);
+        }
+    }
 }

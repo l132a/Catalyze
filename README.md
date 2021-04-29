@@ -28,8 +28,8 @@ How to use :
 - php artisan serve
 - link web http://localhost:8080
 - link admin http://localhost:8080/admin 
-    - username = admin@catalyze.com
-    - password = admin
+    - username : admin@catalyze.com
+    - password : admin
 
 ## License
 
