@@ -24,6 +24,7 @@ How to use :
 - npm run dev (2x)
 - Rename file .env.sample to .env
 - Setting database in .env file
+- php artisan key:generate
 - php artisan migrate --seed
 - php artisan serve
 - link web http://localhost:8080
