@@ -21,6 +21,7 @@ const Container = styled.nav`
     justify-content: center;
     align-content: center;
     align-items: center;
+    border-bottom: #c2c2c2 1px solid;
 `;
 
 const Ul = styled.ul`

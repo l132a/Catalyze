@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SearchIcon from "@material-ui/icons/Search";
@@ -13,10 +14,18 @@ const Header = () => {
             </LogoContainer>
             <NavContainer>
                 <Ul>
-                    <Li>Home</Li>
-                    <Li>About</Li>
-                    <Li>Works</Li>
-                    <Li>Services</Li>
+                    <Li>
+                        <Link to="/">Home</Link>
+                    </Li>
+                    <Li>
+                        <Link to="/about">About</Link>
+                    </Li>
+                    <Li>
+                        <Link to="/works">Works</Link>
+                    </Li>
+                    <Li>
+                        <Link to="/services">Services</Link>
+                    </Li>
                 </Ul>
             </NavContainer>
             <SosmedContainer>
